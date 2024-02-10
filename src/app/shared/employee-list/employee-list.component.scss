@@ -1,0 +1,15 @@
+.employee-list {
+    width: 250px;
+    margin-top:  70px;
+    position:fixed;
+    display: flex;
+    right: 0; /* Esto alineará el menú a la derecha */
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+    justify-content: flex-end; /* Esto centra el contenido hacia la derecha */
+    /* Agrega otros estilos según sea necesario */
+}
+@media screen and (max-width: 1200px) {
+    .employee-list{
+      display:none;
+    }
+  }

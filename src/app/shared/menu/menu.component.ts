@@ -24,20 +24,33 @@ export class MenuComponent implements OnInit {
   private _addItems():MenuItem[]{
     return [
       {
-        label: 'Ventas',
-        icon: 'pi pi-dollar',
+        label: 'Home',
+        icon: 'pi pi-home',
+        routerLink: 'home'
+      },
+      {
+        label: 'Configuracion',
+        icon: 'pi pi-cog',
         items: [
           {
-            label: 'Vender',
-            icon: 'pi pi-dollar'
+            label: 'Perfil de Negocio',
+            icon: 'pi pi-briefcase',
           },
           {
-            label: 'Historial',
-            icon: 'pi pi-dollar'
-          },
-          {
-            label: 'Promociones',
-            icon: 'pi pi-dollar'
+            label: 'Empleados',
+            icon: 'pi pi-users',
+            items: [
+              {
+                label: 'Añadir',
+                icon: 'pi pi-user-plus',
+                routerLink: 'add-employee'
+              },
+              {
+                label: 'Ver',
+                icon: 'pi pi-eye',
+                routerLink: 'view-employees'
+              }
+            ],
           }
         ]
       },
@@ -69,6 +82,5 @@ export class MenuComponent implements OnInit {
         
       }
   ];
-
     }
   }

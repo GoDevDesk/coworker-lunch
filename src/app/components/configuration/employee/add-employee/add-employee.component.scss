@@ -1,0 +1,28 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 73vh;
+    margin-top: 10px;
+}
+
+.card {
+    border-radius: 10px;
+    padding-top: 20px;
+    flex: 1;
+    margin: 20%; 
+    max-height: 100%; 
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.flex-item {
+    flex-basis: calc(50% - 10px);
+    max-width: calc(50% - 10px); 
+    margin-bottom: 10px; 
+}

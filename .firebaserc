@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "backstore00-e87f9"
-  }
+    "default": "coworkerlunch01",
+    "coworkerlunch": "coworkerlunch",
+    "coworker01": "coworkerlunch01"
+  },
+  "targets": {},
+  "etags": {}
 }

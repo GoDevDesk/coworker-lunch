@@ -12,18 +12,24 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SharedModule } from './shared/shared.module';
 import { PrimeNgModule } from './prime-ng/prime-ng.module';
+import { EmployeeListComponent } from './shared/employee-list/employee-list.component';
+import { AddEmployeeComponent } from './components/configuration/employee/add-employee/add-employee.component';
+import { ViewEmployeesComponent } from './components/configuration/employee/view-employees/view-employees.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    EmployeeListComponent,
+    AddEmployeeComponent,
+    ViewEmployeesComponent
   ],
   imports: [
     SharedModule,
@@ -34,7 +40,8 @@ import { PrimeNgModule } from './prime-ng/prime-ng.module';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    PrimeNgModule
+    PrimeNgModule,
+    ReactiveFormsModule 
   ],
   bootstrap: [AppComponent]
 })
