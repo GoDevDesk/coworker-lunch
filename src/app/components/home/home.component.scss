@@ -1,17 +1,54 @@
-.header{
-    margin: 30px
-}
-.cards{
+.container {
     display: flex;
-    align-items: center;
-    margin: 30px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-p-card-content {
-    padding: 0px;
-}
-::ng-deep p-card .p-card-content{
-    padding: 0% !important;
+    height: 100vh;
 }
 
+.left-column {
+    flex: 1; /* La sección izquierda ocupará el 50% del ancho del contenedor */
+}
+
+.right-column {
+    flex: 1; /* La sección derecha ocupará el 50% del ancho del contenedor */
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: flex-start; /* Centra horizontalmente */
+    height: 70%; /* Ocupa toda la altura de la columna izquierda */
+    width: 60%;
+    margin: auto;
+}
+
+.welcome-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: flex-start; /* Centra horizontalmente */
+    height: 80%; /* Ocupa toda la altura de la columna izquierda */
+    width: 90%;
+    margin: auto;
+    background-image: url('/assets/img/minimalist-employees.jpg');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.welcome-container h1 {
+    font-size: 24px; /* Tamaño del título */
+    margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+}
+
+.welcome-container p {
+    font-size: 16px; /* Tamaño del texto */
+}
+
+@media screen and (max-width: 1200px) {
+    .welcome-image{
+      display:none;
+    }
+    .right-column{
+        flex: 0;
+    }
+    }

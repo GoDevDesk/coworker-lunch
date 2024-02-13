@@ -42,12 +42,24 @@ export class MenuComponent implements OnInit {
             items: [
               {
                 label: 'Añadir',
-                icon: 'pi pi-user-plus',
                 routerLink: 'add-employee'
               },
               {
                 label: 'Ver',
-                icon: 'pi pi-eye',
+                routerLink: 'view-employees'
+              }
+            ],
+          },
+          {
+            label: 'Horarios',
+            icon: 'pi pi-hourglass',
+            items: [
+              {
+                label: 'Configurar horarios',
+                routerLink: 'add-employee'
+              },
+              {
+                label: 'Tipos de horarios',
                 routerLink: 'view-employees'
               }
             ],
@@ -55,31 +67,13 @@ export class MenuComponent implements OnInit {
         ]
       },
       {
-        label: 'Stock',
-        icon: 'pi pi-table',
-        items: [
-          {
-            label: 'mis Productos',
-            icon: 'pi pi-dollar'
-          },
-          {
-            label: 'Carga de Stock',
-            icon: 'pi pi-dollar'
-          },
-          {
-            label: 'Pedido',
-            icon: 'pi pi-dollar'
-          }
-        ]
-      },
-      {
-        label: 'Finanzas',
-        icon: 'pi pi-money-bill'
+        label: 'Asignar horarios',
+        icon: 'pi pi-history',
+        routerLink: 'home'
       },
       {
         label: 'Informacion',
-        icon: 'pi pi-chart-line',
-        
+        icon: 'pi pi-chart-line',        
       }
   ];
     }

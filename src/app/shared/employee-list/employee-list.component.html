@@ -1,5 +1,5 @@
 
-<div class="employee-list">
+<div *ngIf="shouldShowMenu()" class="employee-list">
     <form [formGroup]="formGroup">
         <p-listbox [options]="cities" formControlName="selectedCity" optionLabel="name" [style]="{ width: '15rem' }" [listStyle]="{'max-height': '500px'}"></p-listbox>
     </form>

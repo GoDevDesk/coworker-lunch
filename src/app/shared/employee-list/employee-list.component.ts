@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 interface City {
     name: string,
@@ -14,6 +15,10 @@ interface City {
 export class EmployeeListComponent implements OnInit {
   cities!: City[];
 
+  private excludedRoutes = ['/login', '/register'];
+
+  constructor(private _router: Router){  
+}
   formGroup!: FormGroup;
 
   ngOnInit() {
@@ -34,4 +39,7 @@ export class EmployeeListComponent implements OnInit {
           selectedCity: new FormControl<City | null>(null)
       });
   } 
+  shouldShowMenu(): boolean {
+    return !this.excludedRoutes.some(route => this._router.url.includes(route));
+  }
 }
